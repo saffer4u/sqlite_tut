@@ -43,12 +43,12 @@ class DatabaseHelper {
   Future _onCreate(Database db, int version) {
     db.execute('''
       CREATE TABLE $_tableName(
-        $columnId INTEGER PRIMARY KEY
-        $columnName TEXT NOT NULL
+        $columnId INTEGER PRIMARY KEY,
+        $columnName TEXT NOT NULL,
         $columnPhoneNum TEXT NOT NULL
       )
-
       ''');
+    print("Table created...");
   }
 
   // Insert Operation in Databse.
